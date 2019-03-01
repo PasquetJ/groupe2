@@ -8,8 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class Serveur { 
-	
+public class Serveur {
 	
 	public static void main(String[] zero) {
 		
