@@ -10,7 +10,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.io.PrintWriter;
 
-public class Serveur{
+public class Serveur{salut
     
     public static void main(String[] zero) {
         
