@@ -35,12 +35,9 @@ public class Mastermind {
 	}
 	
 	public static void main(String [] args){
-		//String [] combi= "bleu rouge noir jaune".split(" ");
-		//System.out.println(combi);
 		Mastermind m1= new Mastermind();
 		System.out.println(m1);
-		//return combi.index[0];
-		//System.out.println("Position 1: "+ combi.get(1));
+		
 		
 	}
 }
