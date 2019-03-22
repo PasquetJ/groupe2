@@ -32,9 +32,19 @@ public class Client {
 			else
 				
 			combinaison.add(tmp);
-		
 		}
-	}
+		}
+		public String toString(){
+			String c="";
+			for (int i=0; i<4; i++) {
+				combinaison.get(i);
+				c+=combinaison.get(i) + " , ";
+			}
+			return c;
+				
+		}
+		
+
 	
 	public static void main(String[] zero) {
 		
