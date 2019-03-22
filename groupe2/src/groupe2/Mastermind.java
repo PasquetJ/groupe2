@@ -8,7 +8,9 @@ public class Mastermind {
 
 	private List <Integer> hasard = new ArrayList<Integer>();
 	
-	
+	public void compareCouleur(){
+		
+	}
 		
 	public Mastermind() {
 
@@ -24,6 +26,7 @@ public class Mastermind {
 			//String value = combi.get(1);
 			
 		}
+	
 	}
 
 	public String toString() {
@@ -32,6 +35,7 @@ public class Mastermind {
 			r += Colors.values()[i] + ", ";
 		}
 		return r;
+		
 	}
 	
 	public static void main(String [] args){
