@@ -1,47 +1,42 @@
 package groupe2;
-
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
-
+import java.util.Random;
 
 public class Mastermind {
 
-	private List <Integer> hasard = new ArrayList<Integer>();
 	
-	public void compareCouleur(){
-		
-	}
-		
 	public Mastermind() {
-
-		createList();
-	}
-	
-	public void createList(){
-		for( int i=0;i<4;i++){
-
-			
-			int indiceAuHasard = (int) (Math.random()*(Colors.values().length+1)-1);
-			hasard.add(new Integer(indiceAuHasard));
-			//String value = combi.get(1);
-			
-		}
-	
-	}
-
-	public String toString() {
-		String r = "";
-		for (Integer i : hasard) {
-			r += Colors.values()[i] + ", ";
-		}
-		return r;
+		
 		
 	}
 	
-	public static void main(String [] args){
-		Mastermind m1= new Mastermind();
-		System.out.println(m1);
+	 List<String> CreerListeCouleur() {
+		 
+		List<String> listeDeCouleur= new ArrayList<String>();
+		String couleurNoir= new String ("noir");
+		String couleurJaune= new String ("jaune");
+		String couleurRouge= new String("rouge");
+		String couleurBleu= new String("bleu");
 		
+		
+		listeDeCouleur.add(couleurNoir);
+		listeDeCouleur.add(couleurJaune);
+		listeDeCouleur.add(couleurRouge);
+		listeDeCouleur.add(couleurBleu);
+		
+		
+		
+		
+		 return listeDeCouleur;
+		 
+		
+	}
+	List<String> listeAleatoire(List<String> liste){
+		Collections.shuffle(liste);
+		return liste;
 		
 	}
 }

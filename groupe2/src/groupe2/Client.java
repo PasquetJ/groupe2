@@ -53,7 +53,7 @@ public class Client {
 		BufferedReader in;
 		
 		Client c1= new Client();
-		System.out.println(c1);
+
 
 		try {
 		
