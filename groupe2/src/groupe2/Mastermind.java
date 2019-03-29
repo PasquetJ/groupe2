@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Mastermind {
+public class Mastermind<listeDeCouleur> {
 
 	
 	public Mastermind() {
@@ -34,6 +34,22 @@ public class Mastermind {
 		 
 		
 	}
+	public ArrayList <Integer> comparaisonDeliste (ArrayList <String>listeDeCouleur, ArrayList <String>listeMelange){
+	
+	ArrayList<Integer> tableauResultat = new ArrayList<Integer>() ;
+	
+			for (int i=0;i<4;i++) {
+				int iterateurBonneRep= (Integer) null;
+				int iterateurMauvaiseRep=(Integer) null;
+				int iterateurAbsent=(Integer) null;
+				
+			
+				
+					
+			}return (tableauResultat);
+	}
+				
+				
 	List<String> listeAleatoire(List<String> liste){
 		Collections.shuffle(liste);
 		return liste;
