@@ -54,14 +54,14 @@ public class LancementJeu {
 		List maList = mastermind1.CreerListeCouleur();
 		List listeMelange =mastermind1.listeAleatoire(maList);
 		List listeJoueur= joueur.createListJoueur();
-		System.out.println(listeJoueur);
+		System.out.println("Votre combinaison: "+listeJoueur);
 		
 		
 		// voulez vous changer la liste oui non 
 		//comparer les deux listes dans une boucle for avant d'afficher listeMelange
 		// listeJoueur.modifierUnecouleur();
 		
-		System.out.println(listeMelange);
+		System.out.println("La combinaison à trouver était: " +listeMelange);
 		
 	}
 

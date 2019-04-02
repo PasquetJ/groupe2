@@ -19,6 +19,7 @@ public class Joueur {
 	
 	
 	
+	
 	public List createListJoueur(){
 		
 		List <String> listeJoueur = new ArrayList<String>();
@@ -40,37 +41,38 @@ public class Joueur {
 		return listeJoueur;
 		}
 	
+
+
 public static void main(String[] zero) {
-		
-		
-		Socket socket;
-		BufferedReader in;
-		
-		Joueur joueur1= new Joueur();
-
-
-		try {
-		
-			socket = new Socket(InetAddress.getLocalHost(),2019);	
-		        System.out.println("Demande de connexion");
-
-		        in = new BufferedReader (new InputStreamReader (socket.getInputStream()));
-		        String message_distant = in.readLine();
-		        System.out.println(message_distant);
-		        
-		        socket.close();
-		        
-		        
-		       
-		       
-		}catch (UnknownHostException e) {
-			
-			e.printStackTrace();
-		}catch (IOException e) {
-			
-			e.printStackTrace();
-		}
-	}
 	
-	}
+	
+	Socket socket;
+	BufferedReader in;
+	
+	Joueur joueur1= new Joueur();
 
+
+	try {
+	
+		socket = new Socket(InetAddress.getLocalHost(),2019);	
+	        System.out.println("Demande de connexion");
+
+	        in = new BufferedReader (new InputStreamReader (socket.getInputStream()));
+	        String message_distant = in.readLine();
+	        System.out.println(message_distant);
+	        
+	        socket.close();
+	        
+	        
+	       
+	       
+	}catch (UnknownHostException e) {
+		
+		e.printStackTrace();
+	}catch (IOException e) {
+		
+		e.printStackTrace();
+	}
+}
+
+}

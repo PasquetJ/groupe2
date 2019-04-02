@@ -8,9 +8,17 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class Serveur {
+public class Serveur extends Thread{
 	
+	public Serveur(String partie) {
+		super(partie);
+		
+	}
 	
+	public void run() {
+		for(int i=0; i<5; i++)
+			System.out.println(this.getName());
+	}
 	
 	
 	
@@ -29,9 +37,12 @@ public class Serveur {
 		BufferedReader in;
 		PrintWriter out;
 		
+		Serveur s=new Serveur("t");
+		s.start();
+		
 		try {
 		
-			socketserver = new ServerSocket(2019);
+			socketserver = new ServerSocket(2015);
 			System.out.println("Connectez-vous!");
 			socketduserveur = socketserver.accept(); 
 		        System.out.println("Un joueur s'est connecté");
