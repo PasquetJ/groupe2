@@ -23,7 +23,7 @@ public class LancementJeu {
 
 			try {
 			
-				socket = new Socket(InetAddress.getLocalHost(),2019);	
+				socket = new Socket(InetAddress.getLocalHost(),2036);	
 			        System.out.println("Demande de connexion");
 
 			        in = new BufferedReader (new InputStreamReader (socket.getInputStream()));

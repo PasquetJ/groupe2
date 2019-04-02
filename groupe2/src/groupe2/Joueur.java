@@ -43,36 +43,36 @@ public class Joueur {
 	
 
 
-public static void main(String[] zero) {
+//*public static void main(String[] zero) {
 	
 	
-	Socket socket;
-	BufferedReader in;
+	//Socket socket;
+	//BufferedReader in;
 	
-	Joueur joueur1= new Joueur();
+	//Joueur joueur1= new Joueur();
 
 
-	try {
+	//try {
 	
-		socket = new Socket(InetAddress.getLocalHost(),2019);	
-	        System.out.println("Demande de connexion");
+		//socket = new Socket(InetAddress.getLocalHost(),2019);	
+	       // System.out.println("Demande de connexion");
 
-	        in = new BufferedReader (new InputStreamReader (socket.getInputStream()));
-	        String message_distant = in.readLine();
-	        System.out.println(message_distant);
+	      //  in = new BufferedReader (new InputStreamReader (socket.getInputStream()));
+	      //  String message_distant = in.readLine();
+	       // System.out.println(message_distant);
 	        
-	        socket.close();
+	       // socket.close();
 	        
 	        
 	       
 	       
-	}catch (UnknownHostException e) {
+	//}catch (UnknownHostException e) {
 		
-		e.printStackTrace();
-	}catch (IOException e) {
+//		e.printStackTrace();
+//	}catch (IOException e) {
 		
-		e.printStackTrace();
-	}
-}
+//		e.printStackTrace();
+//	}
+//}
 
 }
