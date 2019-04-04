@@ -56,6 +56,8 @@ public class LancementJeu {
 		List listeJoueur= joueur.createListJoueur();
 		System.out.println("Votre combinaison: "+listeJoueur);
 		
+		Comparaison comparaison1=new Comparaison();
+		
 		
 		// voulez vous changer la liste oui non 
 		//comparer les deux listes dans une boucle for avant d'afficher listeMelange
