@@ -37,12 +37,12 @@ public class Serveur extends Thread{
 		BufferedReader in;
 		PrintWriter out;
 		
-		Serveur s=new Serveur();
+		Serveur s=new Serveur("t");
 		s.start();
 		
 		try {
 		
-			socketserver = new ServerSocket(2036);
+			socketserver = new ServerSocket(2035);
 			System.out.println("Connectez-vous!");
 			socketduserveur = socketserver.accept(); 
 		        System.out.println("Un joueur s'est connecté");
