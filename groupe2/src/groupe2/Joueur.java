@@ -9,18 +9,35 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Joueur {
- 
-
-	public Joueur() {
+public class Joueur extends Thread{
+	private String name;
 	
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Joueur() {
+		
+	
+		
 		//ListeJoeur
+	}
+	public Joueur(String partie) {
+		super(partie);
+		
+	}
+	
+	public void run() {
+		for(int i=0; i<5; i++)
+			System.out.println(this.getName());
 	}
 	
 	
-	
-	
 	public List createListJoueur(){
+		
 		
 		List <String> listeJoueur = new ArrayList<String>();
 		

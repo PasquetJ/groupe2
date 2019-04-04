@@ -10,15 +10,7 @@ import java.net.Socket;
 
 public class Serveur extends Thread{
 	
-	public Serveur(String partie) {
-		super(partie);
-		
-	}
 	
-	public void run() {
-		for(int i=0; i<5; i++)
-			System.out.println(this.getName());
-	}
 	
 	
 	
