@@ -15,7 +15,7 @@ public class Serveur extends Thread{
 		super(partie);
 	}
 
-	public void run() {
+	/*public void run() {
 		int n =  0 ; 
 	       while (n++ <  100) {
 	         System.out.println("Je vogue !") ;
@@ -27,7 +27,7 @@ public class Serveur extends Thread{
 	             // gestion de l'erreur
 	         }
 	      }
-	   }
+	   }*/
 		//for(int i=0; i<5; i++)
 			//System.out.println(this.getName());
 	
@@ -41,9 +41,9 @@ public class Serveur extends Thread{
 		BufferedReader in;
 		PrintWriter out;
 		
-		Joueur joueur =new Joueur();
-		joueur.start();
-		System.out.println("Thread lancé") ;
+		//Joueur joueur =new Joueur();
+		//mastermind.start();
+		//System.out.println("Thread lancé") ;
 		try {
 		
 			socketserver = new ServerSocket(2034);

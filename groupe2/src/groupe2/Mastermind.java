@@ -4,18 +4,83 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Mastermind<listeDeCouleur> {
+	
+	private List<String> listeDeCouleur = new ArrayList<String>();
+	private List <String> listeJoueur = new ArrayList<String>();
+
 
 	
-	public Mastermind() {
+
+
+	public Mastermind(List<String> listeDeCouleur, List<String> listeJoueur) {
+		this.listeDeCouleur = listeDeCouleur;
+		this.listeJoueur = listeJoueur;
+	}
+	
+
+
+	public List<String> getListeDeCouleur() {
+		return listeDeCouleur;
+	}
+
+
+
+	public void setListeDeCouleur(List<String> listeDeCouleur) {
+		Scanner couleur  = new Scanner(System.in);
+		for( int i=0;i<4;i++){
+		
+		System.out.print("Veuillez saisir une couleur entre le bleu,rouge,jaune,noir: ");
+		String tmp =couleur.nextLine();
+		if (tmp.compareTo("rouge")!=0 && tmp.compareTo("bleu")!=0 && tmp.compareTo("jaune")!=0 && tmp.compareTo("noir")!=0 && tmp.compareTo(" ")!=0){
+			System.out.println("Erreur de couleur!");	
+			i--;
+		}
+		else
+				
+			listeJoueur.add(tmp);
+		}
+	return listeJoueur;
 		
 		
 	}
-	
-	 List<String> CreerListeCouleur() {
+
+
+
+	public List<String> getListeJoueur() {
+		return listeJoueur;
+	}
+
+
+
+	public List<String> setListeJoueur(List<String> listeJoueur) {
+		Scanner couleur  = new Scanner(System.in);
+			for( int i=0;i<4;i++){
+			
+			System.out.print("Veuillez saisir une couleur entre le bleu,rouge,jaune,noir: ");
+			String tmp =couleur.nextLine();
+			if (tmp.compareTo("rouge")!=0 && tmp.compareTo("bleu")!=0 && tmp.compareTo("jaune")!=0 && tmp.compareTo("noir")!=0 && tmp.compareTo(" ")!=0){
+				System.out.println("Erreur de couleur!");	
+				i--;
+			}
+			else
+					
+				listeJoueur.add(tmp);
+			}
+		return listeJoueur;
+	}
+
+
+List<String> CouleurPossible = new List<> {"Noir";"Jaune";"";""};
+
+public List<String> listaleacreation 
+for (i=0;i<4;i++)
+	int rand = rand.alea()
+
+	List<String> CreerListeCouleur() {
 		 
-		List<String> listeDeCouleur= new ArrayList<String>();
 		String couleurNoir= new String ("noir");
 		String couleurJaune= new String ("jaune");
 		String couleurRouge= new String("rouge");
@@ -34,20 +99,6 @@ public class Mastermind<listeDeCouleur> {
 		 
 		
 	}
-	public ArrayList <Integer> comparaisonDeliste (ArrayList <String>listeDeCouleur, ArrayList <String>listeMelange){
-	
-	ArrayList<Integer> tableauResultat = new ArrayList<Integer>() ;
-	
-			for (int i=0;i<4;i++) {
-				int iterateurBonneRep= (Integer) null;
-				int iterateurMauvaiseRep=(Integer) null;
-				int iterateurAbsent=(Integer) null;
-				
-			
-				
-					
-			}return (tableauResultat);
-	}
 				
 				
 	List<String> listeAleatoire(List<String> liste){
@@ -55,4 +106,13 @@ public class Mastermind<listeDeCouleur> {
 		return liste;
 		
 	}
+public List createListJoueur(){
+		
+	
+		
+	
+		
+		
+		
+		}
 }
