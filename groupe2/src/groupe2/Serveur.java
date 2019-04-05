@@ -11,13 +11,25 @@ import java.net.Socket;
 public class Serveur extends Thread{
 	
 	
-	
-	
-	
-	
-	
-	
-	
+	public Serveur(String partie) {
+		super(partie);
+	}
+
+	public void run() {
+		int n =  0 ; 
+	       while (n++ <  100) {
+	         System.out.println("Je vogue !") ;
+	          try {
+	      
+	            Thread.sleep(10) ;
+	         }  catch (InterruptedException e) {
+	         
+	             // gestion de l'erreur
+	         }
+	      }
+	   }
+		//for(int i=0; i<5; i++)
+			//System.out.println(this.getName());
 	
 	
 	
@@ -29,12 +41,12 @@ public class Serveur extends Thread{
 		BufferedReader in;
 		PrintWriter out;
 		
-		Serveur s=new Serveur("t");
-		s.start();
-		
+		Joueur joueur =new Joueur();
+		joueur.start();
+		System.out.println("Thread lancé") ;
 		try {
 		
-			socketserver = new ServerSocket(2035);
+			socketserver = new ServerSocket(2034);
 			System.out.println("Connectez-vous!");
 			socketduserveur = socketserver.accept(); 
 		        System.out.println("Un joueur s'est connecté");

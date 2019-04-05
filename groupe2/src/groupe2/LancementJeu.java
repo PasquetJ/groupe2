@@ -23,7 +23,7 @@ public class LancementJeu {
 
 			try {
 			
-				socket = new Socket(InetAddress.getLocalHost(),2035);	
+				socket = new Socket(InetAddress.getLocalHost(),2034);	
 			        System.out.println("Demande de connexion");
 
 			        in = new BufferedReader (new InputStreamReader (socket.getInputStream()));
@@ -56,7 +56,7 @@ public class LancementJeu {
 		List listeJoueur= joueur.createListJoueur();
 		System.out.println("Votre combinaison: "+listeJoueur);
 		
-		Comparaison comparaison1=new Comparaison();
+		//Comparaison comparaison1=new Comparaison();
 		
 		
 		// voulez vous changer la liste oui non 

@@ -1,11 +1,14 @@
 package groupe2;
 
-public class Comparaison {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Comparaison extends LancementJeu {
 	
-	public Comparaison() {
+	public Comparaison(listeJoueur, listeMelange) {
 		
-		for (i=0;i<4; i++) {
+		/*for (i=0;i<4; i++) {
+		Object listeJoueur;
 		if (listeJoueur[i]!=listeMelange[i]) {
 				for (j=0; i<4;i++) {
 					if( listeMelange[j].containslisteJoueur[i])
@@ -14,9 +17,13 @@ public class Comparaison {
 						System.out.println("existe pas");
 				}
 		else
-			System.out.println("bien placé");
+			System.out.println("bien placé");*/
 		
+		ArrayList<String> listeComparaison= new ArrayList<String>();
+        for (String temp : listeJoueur)
+            listeComparaison.add(listeMelange.contains(temp) ? "0" : "*");
+        System.out.println(listeComparaison);
 }
 }
-}
-}
+//}
+//}
