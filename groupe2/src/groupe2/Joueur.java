@@ -40,20 +40,29 @@ package groupe2;
 			        
 			        System.out.println("Lancement du jeu");
 					Mastermind mastermind1= new Mastermind();
+					
+				
 
-
-//					List listeJoueur= mastermind1.creationListeJoueur();
+					//List listeJoueur= mastermind1.creationListeJoueur();
 					out = new PrintWriter(socketjoueur.getOutputStream());
 			        System.out.println(mastermind1.toString(1));
 			        System.out.println(mastermind1.toString(0));
+			        
 					
+					//System.out.println(c1);
+				
 //					System.out.println(Comparaison.ComparerDeuxList(mastermind1.getListeJoueur(), mastermind1.toString(0)));
 
 			        
 			        out = new PrintWriter(socketjoueur.getOutputStream());
-			        System.out.println(Comparaison.ComparerDeuxList(mastermind1.getListeJoueur(), mastermind1.toString(0)));
+			        //System.out.println(Comparaison.ComparerDeuxList(mastermind1.getListeJoueur(), mastermind1.toString(0)));
+			        //Comparaison c1 = new Comparaison ();
+			        System.out.println(Comparaison.bienPlace(mastermind1.getListeJoueur(),mastermind1.toString(0))+" bien placé");
+			        System.out.println(Comparaison.newListJoueur);
+			        System.out.println(Comparaison.newListAleatoire);
+			        System.out.println(Comparaison.malPlace(Comparaison.newListJoueur,Comparaison.newListAleatoire));
+			        
 			        out.flush();
-			        		        
 			        
 			        socketjoueur.close();
 			        

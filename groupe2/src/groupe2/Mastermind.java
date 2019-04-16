@@ -86,7 +86,7 @@ import groupe2.Colors;
 			String r = "";
 			String j ="";
 			for (Integer i: hasard) {
-				r += ","+ Colors.values()[i] ;
+				r += Colors.values()[i] +"," ;
 			}
 			if (numeroDelist == 0) {
 				return r;
