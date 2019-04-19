@@ -43,11 +43,15 @@ public  class Joueur {
 		Comparaison comparaison1 = new Comparaison();
 				
 			
-
 		out = new PrintWriter(socketjoueur.getOutputStream());
+		
 		System.out.println(mastermind1.toString(1));
-		System.out.println(mastermind1.toString(0));
+		//System.out.println(mastermind1.toString(0));
+		//for( int i=0;i<5;i++) {
+			
 		System.out.println(comparaison1.comparaison(mastermind1.getListeJoueur(),mastermind1.toString(0)));
+		
+		//}
 						
 		        
 		out = new PrintWriter(socketjoueur.getOutputStream());
