@@ -37,9 +37,8 @@ package groupe2;
 			this.hasard = hasard;
 		}
 
-		public  void creationListeJoueur(){
+		public  List<String> creationListeJoueur(){
 			Scanner couleur  = new Scanner(System.in);
-			for (int j=0;j<5;j++) {
 			for( int i=0;i<4;i++){
 			
 			System.out.print("Veuillez saisir une couleur entre le bleu,rouge,jaune,noir: ");
@@ -52,9 +51,9 @@ package groupe2;
 					
 				listeJoueur.add(tmp);
 			}
-		return;
+		return listeJoueur;
 		}
-		}
+		
 		
 		
 		
