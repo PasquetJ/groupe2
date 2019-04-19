@@ -8,9 +8,7 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+
 
 
 public  class Joueur {
@@ -25,7 +23,7 @@ public  class Joueur {
 		BufferedReader in;
 		PrintWriter out;
 		
-		Joueur joueur1= new Joueur();
+		
 
 
 		try {
@@ -37,25 +35,14 @@ public  class Joueur {
 		in = new BufferedReader (new InputStreamReader (socketjoueur.getInputStream()));
 		String message_distant = in.readLine();
 		System.out.println(message_distant);
-		        
-		System.out.println("Lancement du jeu");
-		Mastermind mastermind1= new Mastermind();
-		Comparaison comparaison1 = new Comparaison();
-				
-			
-		out = new PrintWriter(socketjoueur.getOutputStream());
 		
-		System.out.println(mastermind1.toString(1));
-		//System.out.println(mastermind1.toString(0));
-			
-		System.out.println(comparaison1.comparaison(mastermind1.getListeJoueur(),mastermind1.toString(0)));
+		
 		
 						
 		        
-		out = new PrintWriter(socketjoueur.getOutputStream());
-		        
+		
 		     
-		out.flush();
+		
 		        
 		socketjoueur.close();
 		        
