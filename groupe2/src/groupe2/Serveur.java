@@ -15,24 +15,6 @@ public class Serveur extends Thread{
 		super(partie);
 	}
 
-	/*public void run() {
-		int n =  0 ; 
-	       while (n++ <  100) {
-	         System.out.println("Je vogue !") ;
-	          try {
-	      
-	            Thread.sleep(10) ;
-	         }  catch (InterruptedException e) {
-	         
-	             // gestion de l'erreur
-	         }
-	      }
-	   }*/
-		//for(int i=0; i<5; i++)
-			//System.out.println(this.getName());
-	
-	
-	
 	
 	public static void main(String[] zero) {
 		
@@ -41,21 +23,19 @@ public class Serveur extends Thread{
 		BufferedReader in;
 		PrintWriter out;
 		
-		//Joueur joueur =new Joueur();
-		//mastermind.start();
-		//System.out.println("Thread lancé") ;
+		
 		try {
 		
 			socketserver = new ServerSocket(2034);
 			System.out.println("Connectez-vous!");
 			socketduserveur = socketserver.accept(); 
-		        System.out.println("Un joueur s'est connecté");
+		    System.out.println("Un joueur s'est connecté");
 			out = new PrintWriter(socketduserveur.getOutputStream());
-		        out.println("Vous êtes connecté !");
-		        out.flush();
+		    out.println("Vous êtes connecté !");
+		    out.flush();
 		                
-		        socketduserveur.close();
-		        socketserver.close();
+		    socketduserveur.close();
+		    socketserver.close();
 		        
 		}catch (IOException e) {
 			
@@ -64,5 +44,3 @@ public class Serveur extends Thread{
 	}
 
 }
-
-

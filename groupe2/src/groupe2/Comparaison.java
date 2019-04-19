@@ -4,84 +4,57 @@ import java.awt.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public final  class  Comparaison {
-	private int nbr1;
-	private int nbr2;
-	static ArrayList <String> newListJoueur= new ArrayList<String>();
-	static ArrayList <String> newListAleatoire = new ArrayList<String>();
+public   class  Comparaison {
 	
-	public  Comparaison (/*ArrayList<String> listJoueur, String stringAleatoire*/) {
-		//bienPlace(listJoueur, stringAleatoire);
+	public Comparaison(){
 		
 	}
 	
-		
-
-
-
-
-
-
-public static int  bienPlace (ArrayList<String> listJoueur, String stringAleatoire) {
-	String[] tabAleatoire = stringAleatoire.split(",");
-	ArrayList<String> listAleatoire = new ArrayList<String>();
 	
-	for (int l =0 ; l<tabAleatoire.length;l++) {
-		listAleatoire.add(tabAleatoire[l]);
-	}
-		int nbr1 =0;
 		
-		for (int j=0;j<4;j++) {
-			String tmp = listJoueur.get(j);
-			if(tmp.compareTo(listAleatoire.get(j))==0) {
-				nbr1++;
-				//listJoueur.remove(j);
-				//listAleatoire.remove(j);
-				
-					
-			}
-			else {
-				newListJoueur.add(listJoueur.get(j));
-				newListAleatoire.add(listAleatoire.get(j));
-				//System.out.println(newListAleatoire);
-				//System.out.println(newListJoueur);
-			}
+	
+		
+		public String comparaison (ArrayList<String> listJoueur, String stringAleatoire) {
+			boolean[] utilise={false,false,false,false};
+			String [] resultat={"Existe pas","Existe pas","Existe pas","Existe pas"};
 			
 			
-			}
-		
-		return nbr1;
-		
-}
-	public static int malPlace (ArrayList<String> newListJoueur, ArrayList< String> newListAleatoire) {
-		
-		int nbr2 = 0;
-		for (int i=0;i< newListJoueur.size();i++) {
-			String tmp = newListJoueur.get(i);
-			for(int n=i++;n< newListJoueur.size(); i++) {
-				
-			if(tmp.compareTo(newListAleatoire.get(n))==0) {
-				nbr2++;
-				
-				
-					
-			}
-			else {}
 			
+			String[] tabAleatoire = stringAleatoire.split(",");
+			ArrayList<String> listAleatoire = new ArrayList<String>();
+			
+			for (int l =0 ; l<tabAleatoire.length;l++) {
+				listAleatoire.add(tabAleatoire[l]);
+			}
+
+		
+			for (int i=0; i<4; i++){
+			if(listJoueur.get(i).compareTo(listAleatoire.get(i))==0){
+			resultat[i]="Bien Place";
+			utilise[i]= true;
 			
 			}
 		}
 		
-		return nbr2;
-}
 		
+		for (int i=0; i<4; i++){
+			if(resultat[i]=="Existe pas"){
+			for (int j=0; j<4; j++){
+				if(listJoueur.get(i).equals(listAleatoire.get(j)) && !utilise[j]){
+					resultat[i]="Mal place";
+					utilise[j]=true;
+				}
+			}
+		}
+				}
 		
-		
-		
-}
 
-/*public String toString() {
-	String message="";
-		message="Vous avez "+ nbr1 +" couleur(s) bien placée(s) "+"et la nouvelle liste aleatoire est: "+newListAleatoire;//+" et "+ nbr2+" couleur(s) mal placée(s)";
-		return message;
-	}*/
+	return Arrays.toString(resultat);
+
+		}
+	
+	
+	
+	
+	
+}

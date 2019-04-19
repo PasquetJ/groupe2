@@ -6,7 +6,7 @@ package groupe2;
 	import java.util.Collections;
 	import java.util.Scanner;
 
-import groupe2.Colors;
+
 
 
 	public class Mastermind {
@@ -15,8 +15,8 @@ import groupe2.Colors;
 		private ArrayList <String> listeJoueur = new ArrayList<String>();
 		
 
-		public Mastermind(/*List<String> listeJoueur*/) {
-			//this.listeJoueur = listeJoueur;
+		public Mastermind() {
+			
 
 			createList();
 			creationListeJoueur();
@@ -28,23 +28,7 @@ import groupe2.Colors;
 
 
 
-		/*public List<String> setListeJoueur(List<String> listeJoueur) {
-			Scanner couleur  = new Scanner(System.in);
-				for( int i=0;i<4;i++){
 				
-				System.out.print("Veuillez saisir une couleur entre le bleu,rouge,jaune,noir: ");
-				String tmp =couleur.nextLine();
-				if (tmp.compareTo("rouge")!=0 && tmp.compareTo("bleu")!=0 && tmp.compareTo("jaune")!=0 && tmp.compareTo("noir")!=0 && tmp.compareTo(" ")!=0){
-					System.out.println("Erreur de couleur!");	
-					i--;
-				}
-				else
-						
-					listeJoueur.add(tmp);
-				}
-			return listeJoueur;
-		}*/
-		
 		public List<Integer> getHasard() {
 			return hasard;
 		}
@@ -153,5 +137,4 @@ import groupe2.Colors;
 			System.out.println(m1);
 			}
 	}
-
 
