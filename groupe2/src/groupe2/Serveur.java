@@ -48,7 +48,7 @@ public class Serveur {
 			
 			
 			System.out.println(mastermind1.toString(1));
-			System.out.println(mastermind1.toString(0));
+			//System.out.println(mastermind1.toString(0));
 			System.out.println(comparaison1.comparaison(mastermind1.getListeJoueur(),mastermind1.toString(0)));
 			 socketduserveur.close();				
 			  socketserver.close();  
